@@ -1,0 +1,6 @@
+{
+  "name": "Aria — High-End Romantic Discovery",
+  "description": "Curated high-end dating platform combining editorial elegance with deep AI compatibility matching and intuitive romantic discovery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

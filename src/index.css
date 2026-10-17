@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FAF8FF;
+    color: #131B2E;
+  }
+
+  h1, h2, h3, .font-serif, .font-headline {
+    font-family: var(--font-serif);
+  }
+}
+
+.glass-surface {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.glass-card-elevated {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(253, 164, 175, 0.35);
+  box-shadow: 0 20px 48px -12px rgba(19, 27, 46, 0.08), 0 0 32px 0 rgba(225, 29, 72, 0.07);
+}
+
+.crimson-glow {
+  box-shadow: 0 10px 24px -4px rgba(225, 29, 72, 0.38);
+}
+
+.crimson-glow-hover:hover {
+  box-shadow: 0 14px 28px -2px rgba(225, 29, 72, 0.45);
+}
+
+.subtle-pulse {
+  animation: subtleGlow 3s infinite alternate ease-in-out;
+}
+
+@keyframes subtleGlow {
+  0% { box-shadow: 0 0 12px rgba(225, 29, 72, 0.2); }
+  100% { box-shadow: 0 0 24px rgba(225, 29, 72, 0.45); }
+}
+
+/* Hide scrollbar for smooth horizontal trays */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
